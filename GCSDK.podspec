@@ -33,9 +33,9 @@ Pod::Spec.new do |s|
   s.ios.vendored_libraries = 'libGTCommonSDK.a', 'libGTCountSDK.a'
   # s.ios.vendored_frameworks = 'GeYanSdk.framework'
   # 所需的framework，多个用逗号隔开
-  # s.frameworks = 'AdSupport'
+  s.frameworks = 'AdSupport'
   # “弱引用”所需的framework，多个用逗号隔开
-  s.ios.weak_frameworks = 'WebKit'
+  # s.ios.weak_frameworks = 'WebKit'
   # 所需的library，多个用逗号隔开
   s.libraries = "sqlite3.0"
   # 是否使用ARC，如果指定具体文件，则具体的问题使用ARC
