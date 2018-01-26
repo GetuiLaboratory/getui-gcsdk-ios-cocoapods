@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   # “弱引用”所需的framework，多个用逗号隔开
   # s.ios.weak_frameworks = 'WebKit'
   # 所需的library，多个用逗号隔开
-  s.libraries = "sqlite3.0"
+  s.libraries = "sqlite3.0","z"
   # 是否使用ARC，如果指定具体文件，则具体的问题使用ARC
   s.requires_arc = true
 
