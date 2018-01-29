@@ -90,18 +90,6 @@ typedef enum {
 + (void)trackCustomKeyValueEventEnd:(NSString *)eventId withArgs:(NSDictionary *)args;
 
 /**
- 开始统计应用使用时长，建议在 App 进入前台时调用
- 即在 applicationDidBecomeActive: 回调中调用本方法
- */
-+ (void)trackActiveBegin;
-
-/**
- 结束统计应用使用时长，建议在 App 离开前台时调用
- 即在 applicationWillResignActive: 回调中调用本方法
- */
-+ (void)trackActiveEnd;
-
-/**
  计数事件统计
 
  @param eventId 事件 Id，需要在个数后台配置才能生效
