@@ -2,7 +2,7 @@
 //  GTCountSDK.h
 //  GTCountSDK
 //
-//  Created by getui on 2017/7/18.
+//  Created by GeTui on 2017/7/18.
 //  Copyright © 2017年 GeTui. All rights reserved.
 //
 
