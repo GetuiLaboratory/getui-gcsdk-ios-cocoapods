@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # 名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错
   s.name         = "GCSDK"
   # 版本号/库原代码的版本
-  s.version      = "1.1.1.0"
+  s.version      = "2.1.4.0"
   # 简介
   s.summary      = "个数 iOS SDK CocoaPods 集成库"
   # 项目主页地址
