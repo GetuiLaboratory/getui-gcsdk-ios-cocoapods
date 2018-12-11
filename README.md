@@ -1,4 +1,4 @@
-#  getui-gcsdk-ios-cocoapods
+# getui-gcsdk-ios-cocoapods
 个数 iOS SDK CocoaPods 集成库
 
 ## podfile 配置
