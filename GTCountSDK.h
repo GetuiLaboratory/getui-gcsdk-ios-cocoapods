@@ -5,7 +5,7 @@
 //  Created by GeTui on 2017/7/18.
 //  Copyright © 2017年 GeTui. All rights reserved.
 //
-// Version : 2.1.5.3
+// Version : 2.1.5.1
 
 #import <Foundation/Foundation.h>
 
@@ -76,7 +76,7 @@ typedef enum {
  若多次调用则以最后一次开始的时间为准
  
  @param eventId 自定义事件 Id，需要在个数后台配置才能生效
- @param args 自定义属性，需与接口 trackCustomKeyValueEventEnd:withArgs: 传入的参数一致(同一个变量)，用于扩展统计需要
+ @param args 自定义属性，key 必须为 NSString 类型，value 仅支持使用 NSNumber ，bool ， NSString ，NSDate 4 种类型。需与接口 trackCustomKeyValueEventEnd:withArgs: 传入的参数一致。
  */
 + (void)trackCustomKeyValueEventBegin:(NSString *)eventId withArgs:(NSDictionary *)args;
 
@@ -86,7 +86,7 @@ typedef enum {
  若多次调用则以第一次结束的时间为准
  
  @param eventId 自定义事件 Id，需要在个数后台配置才能生效
- @param args 自定义属性，需与接口 trackCustomKeyValueEventBegin:withArgs: 传入的参数一致(同一个变量)，用于扩展统计需要
+ @param args 自定义属性，key 必须为 NSString 类型，value 仅支持使用 NSNumber ，bool ， NSString ，NSDate 4 种类型。需与接口 trackCustomKeyValueEventBegin:withArgs: 传入的参数一致。
  */
 + (void)trackCustomKeyValueEventEnd:(NSString *)eventId withArgs:(NSDictionary *)args;
 
@@ -94,16 +94,34 @@ typedef enum {
  计数事件统计
  
  @param eventId 事件 Id，需要在个数后台配置才能生效
- @param args 需要展示的键值对值
+ @param args 自定义属性，key 必须为 NSString 类型，value 仅支持使用 NSNumber ，bool ， NSString ，NSDate 4 种类型。
  */
 + (void)trackCountEvent:(NSString *)eventId withArgs:(NSDictionary *)args;
+
++ (void)handleUrl:(NSURL*)url;
+/**
+ 用户属性设置
+
+ @param profiles 用户属性参数，key 必须为 NSString 类型，value 仅支持使用 NSNumber ，bool ， NSString ，NSDate 4 种类型。
+ */
++ (void)setProfile:(NSDictionary *)profiles;
+
+/**
+ 是否启动开发者模式，在该模式下数据会实时上传，并且将会打印相关的数据上传i信息
+ 
+ @param isDebug 是否开启
+ */
++(void)setDebugEnable:(BOOL)isDebug;
+
+/**
+处理 hybrid 应用的事件
+ @param request 网络请求
+ @param webView webView
+ */
++ (BOOL)handleRequset:(NSURLRequest *)request webView:(id)webView;
 
 /**
  版本
  */
 +(NSString *)sdkVersion;
-/**
- 开发者模式
- */
-+(void)setDebugEnable:(BOOL)isDebug;
 @end
