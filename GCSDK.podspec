@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # 名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错
   s.name         = "GCSDK"
   # 版本号/库原代码的版本
-  s.version      = "2.1.7.2"
+  s.version      = "2.1.7.1"
   # 简介
   s.summary      = "个数 iOS SDK CocoaPods 集成库"
   # 项目主页地址
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   # 需要包含的源文件
   s.source_files  = 'GTCountSDK.h'
   # 依赖的第三方pod
-  s.dependency 'GTCommonSDK', '1.1.0.0'
+  s.dependency 'GTCommonSDK', '>=1.1.0.0'
   # 使用了第三方静态库
   s.ios.vendored_libraries = 'libGTCountSDK.a'
   # s.ios.vendored_frameworks = 'GeYanSdk.framework'
