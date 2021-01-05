@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   # 需要包含的源文件
   s.source_files  = 'GTCountSDK.h'
   # 依赖的第三方pod
-  s.dependency 'GTCommonSDK', '>=1.2.0.0'
+  s.dependency 'GTCommonSDK', '>=1.2.1.0'
   # 使用了第三方静态库
   s.ios.vendored_libraries = 'libGTCountSDK.a'
   # s.ios.vendored_frameworks = 'GeYanSdk.framework'
