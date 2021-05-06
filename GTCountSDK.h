@@ -5,7 +5,7 @@
 //  Created by GeTui on 2017/7/18.
 //  Copyright © 2017年 GeTui. All rights reserved.
 //
-// Version : 2.1.9.0
+// Version : 2.2.0.0
 
 #import <Foundation/Foundation.h>
 
@@ -124,4 +124,14 @@ typedef enum {
  版本
  */
 +(NSString *)sdkVersion;
+
+/**
+ *  设置IDFA
+ *
+ *  SDK-2.2.0.0+
+ *
+ *  @param idfa idfa
+ */
++ (void)setIDFA:(NSString *)idfa;
+
 @end
